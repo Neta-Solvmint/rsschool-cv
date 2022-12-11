@@ -1,4 +1,24 @@
 
+#
+# Natalia Serebrennikova
+# My Contact Info:
+
+* **Phone:** +7 9211 837 34 36
+* **E-mail:** [kibelkano@gmail.com](kibelkano@gmail.com)
+* **GitHub:** [Neta-Solvmint](https://https://github.com/Neta-Solvmint)
+* **Telegram** [Neta S.](https://t.me/Rabbit_red)
+
+# About Me
+
+Currently I worked as a manager in retail company. I am tired of my job and I always wanted to learn something new for changing my life. That is why I`m here. My goal is to develop new products.
+* **My strengths:**
+    * Quick learner
+    * Diligence
+    * Team player
+
+
+# Skills
+
 * HTML/Css
 * VS Code
 * JavaScript (in process)
