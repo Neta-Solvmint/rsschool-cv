@@ -39,3 +39,8 @@ function brightest(arrColors){
     * HTML/CSS
     * JavaScript (in process...)
     * Python (in process...)
+
+# Languages
+
+* **Russian** - native speaker
+* **English** - B1
