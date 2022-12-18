@@ -1,23 +1,13 @@
 
 html {
     box-sizing: border-box;
-    /* line-height: 1; */
-  }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  
-  /* для flex элементов */
-  .flex {
-    display: flex;
-  }
-  
-  
-  /* стили написания шрифтов примененные к сайту */
-  /* для заголовков */
+}
+
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
 
 @font-face {
     font-family: 'Roboto Condensed';
@@ -30,6 +20,15 @@ html {
 
 @font-face {
     font-family: 'Roboto Condensed';
+    src: local('Roboto Condensed'), local('Roboto-Condensed-Regular'),
+        url('RobotoCondensed-Regular.woff2') format('woff2'),
+        url('RobotoCondensed-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Roboto Condensed';
     src: local('Roboto Condensed Bold'), local('Roboto-Condensed-Bold'),
         url('RobotoCondensed-Bold.woff2') format('woff2'),
         url('RobotoCondensed-Bold.woff') format('woff');
@@ -38,196 +37,173 @@ html {
 }
 
 :root {
-    --grey_slate:#6E7F91;
+    --gray_slate:#6E7F91;
     --smoky_white: #F5F5F5;
     --beige: #CDCAC5;
-    --grey-brown: #A38970;
+    --gray-brown: #A38970;
     --dark-blue: #394C60;
-    --gap: 31px;
+    --gap: 30px;
 }
 
 body {
-    min-width: 320px; /* минимальная ширина сайта для адаптивной верстки */
-    font-family: Roboto Condensed; /* шрифт по умолчанию */
-    
-}
-.container {
-    max-width: 1280px;
-    margin: 0 auto;
-    background-color: var(--smoky_white);
+    min-width: 320px; /* ??? */
+    font-family: 'Roboto Condensed';
+    font-weight: 300;
 }
 
-/* настройки для разделов контента (не header, не footer) */
-.content {
-    max-width: 100%;
-    margin: 0 90px;
-}
-
-
-h1, h2, h3 {
+h1, h2 {
     margin: 0;
     font-weight: normal; /* убираем автоматическую жирность заголовков */
+}
+
+h3 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--dark-blue);
 }
 
 a {
     text-decoration: none;
 }
 
-/* убираем лишние свойства у всех списков по умолчанию (вместо .list-reset) */
 ul {
-    margin: 20px;
+    margin: 5px 20px 20px 20px;
     padding: 0;
 
 }
 
-/* li {
-    list-style-type: none;
-} */
+.flex {
+    display: flex;
+    flex-direction: row;
+    }
 
-/* p {
-    line-height: 32px;
-    margin: 0;
-} */
-
-
-
-.header {
-    width: 100%;
-    height: 106px;
-    background-color: var(--grey_slate);
-    margin-bottom: var(--gap);
-}
-.header__logo-link {
-    padding-left: 86px;
-    padding-top: 20px;
+.container {
+    max-width: 990px;
+    min-width: 600px;
+    margin: 0 auto;
+    background-color: var(--smoky_white);
 }
 
-.header__logo-link > img {
-    width: 185px;
-    height: 66px;
+.content {
+    padding: 0 70px 0 70px;
 }
 
-.header__nav {
-    margin-left: 240px;
+header {
+    height: 100px;
+    background-color: var(--gray_slate);
+}
+header > nav {
+    height: 100%;
+}
+
+header > nav > ul {
+    margin: 0 auto;
+    min-width: 600px;
+    max-width: 700px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
     align-items: flex-end;
 
+    padding-bottom: var(--gap);
 }
 
-.navigation-items > li {
+.nav__list-item {
     list-style-type: none;
 }
 
-.item-block > a {
+.item-link {
     color: var(--smoky_white);
 }
-
-.item-block:not(:last-child) {
-    margin-right: 36px;
-}
-
-.item-block:last-child {
-    padding-right: 26px;
-}
-
 .item-link:hover,
 .item-link:focus {
     color: var(--dark-blue);
 }
-
-
 .item-link:active {
     color: var(--smoky_white);
 }
 
-
-/* hero */
-.hero {
-    width: 100%;
-    height: 296px;
-    background-color: var(--beige);
-    margin-left: 0;
+.personal {
     flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--beige);
+
     margin-bottom: var(--gap);
 }
-.hero__banner {
-    padding-left: 170px;
 
-}
-
-.hero__banner_descr {
+.personal__banner {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-right: 160px;
 }
 
-.hero__banner-caption {
+.personal__section-title {
     margin-bottom: 28px;
-    color: var(--dark-blue);
-    font-weight: 700px;
+    
     font-weight: 700;
     font-size: 42px;
     line-height: 51px;
-}
-
-.dividing_line_banner{
-    width: 462px;
-    height: 5px;
-    border-radius: 10px;
-    background-color: var(--grey-brown);
-    margin-bottom: 31px;
-}
-
-.hero__banner-post {
-    font-weight: 300;
-    font-size: 25px;
-    line-height: 30px;
     color: var(--dark-blue);
 }
 
-.photo_cv {
-    margin-top: 13px;
+.personal__line {
+    width: 96%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: var(--gray-brown);
+    margin-bottom: 31px;
+}
+.personal__position {
+    font-size: 25px;
+    line-height: 30px;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+}
+
+.personal__photo-cv {
+    margin: 25px 0;
 }
 
 
 /* all_columns */
-.all_columns {
+.cv-content {
     flex-direction: row;
-    flex-wrap: wrap;
-    padding-left: 90px;
 }
 
 
-/* column_1 */
-.column_1 {
+/* razmetka */
+.cv-content__column {
     flex-direction: column;
-    max-width: 404px;
-    margin-right: 79px;
+    padding-bottom: var(--gap);
+}
+.cv-content__veltical-line {
+    width: 10px;
+    border-radius: 10px;
+    background-color: var(--gray-brown);
+    margin: 5px 50px 25px 50px;
 }
 
-.dividing_line_first {
-    max-width: 404px;
+.cv-content_horiz-line {
+    align-self: center;
+    width: 110%;
     height: 5px;
     border-radius: 10px;
-    background-color: var(--grey-brown);
-    margin-bottom: 36px;
+    background-color: var(--gray-brown);
+    margin: 36px 0;
 }
 
-.contacts {
-    margin-bottom: 61px;
-}
-
-.contacts > ul {
+#contacts > ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.contacts > li {
+#contacts > li {
     list-style-type: none;
 }
 
-
-.caption {
+.cv-content__section-title {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
@@ -235,124 +211,65 @@ ul {
     margin-bottom: 30px;
 }
 
-.contact_link {
-    font-weight: 300;
+.contact-link {
     font-size: 15px;
     line-height: 18px;
     color: var(--dark-blue);
     margin-bottom: 9px;
 }
 
-.contact_link > a {
+.contact-link > a {
+    font-weight: 400;
     color: var(--dark-blue);
-    font-weight: 700;
-}
-
-.skills {
-    margin-bottom: 45px;
-}
-
-.education_and_courses {
-    margin-bottom: 138px;
-}
-
-.education {
-    margin-bottom: 40px;
-}
-
-.education_and_courses > h3 {
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 20px;
-    color: var(--dark-blue);
-    padding-left: 19px;
-}
-
-/* разделительная черта */
-.dividing_line {
-    width: 10px;
-    height: 1274px;
-    border-radius: 10px;
-    background-color: var(--grey-brown);
-    margin-right: 59px;
-    margin-bottom: 27px;
-}
-
-/* column 2 */
-.column_2 {
-    flex-direction: column;
-    max-width: 551px;
-}
-
-.dividing_line_second {
-    max-width: 548px;
-    height: 5px;
-    border-radius: 10px;
-    background-color: var(--grey-brown);
-    margin-bottom: 36px;
-}
-
-.about_me {
-    margin-bottom: 30px;
-}
-
-.about_me > h3 {
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 20px;
-    color: var(--dark-blue);
-    padding-left: 19px;
-}
-
-.code_example {
-    margin-bottom: 179px;
-}
-
-.code_example > h3 {
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 20px;
-    color: var(--dark-blue);
-    padding-left: 19px;
-}
-
-.example {
-    display: block;
-    margin: 0;
 }
 
 
-/* footer */
+
+
 .footer {
     width: 100%;
-    height: 109px;
-    background-color: var(--grey_slate);
-    flex-direction: row;
-    justify-content: space-between;
+    background-color: var(--gray_slate);
+    justify-content: left;
+    align-items: center;
+
+    padding-bottom: 0;
 }
 
-.footer_information {
-    display: block;
-    /* max-width: 260px; */
-    background-image: url(../github-logo.svg);
-    background-repeat: no-repeat;
-    background-position:  left 10px center;
-    padding-top: 44px;
-    padding-right: 90px;
+.footer__main {
+    width: 100%;
+    height: 100px;
+    
+    justify-content: left;
+    align-items: center;
+}
+.footer__github-link {
+    margin: 0 auto;
+    font-weight: 700;
+}
+
+.footer__bottom {
+    text-align: center;
 }
 
 
-.footer_information > a {
-    margin-right: 20px;
-    color: var(--smoky_white);
-    /* background-image: url(../github-logo.svg);
-    background-repeat: no-repeat;
-    background-position:  left 10 px center; */
+
+
+
+.logo-link {
+    padding-left: 86px;
+    padding-top: 20px;
 }
 
-.footer_information > span {
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 20px;
-    color: var(--smoky_white);
+.logo-link > img {
+    width: 185px;
+    height: 66px;
 }
+
+
+
+
+@media (max-width: 768px) {
+    .section {
+      width: 100%;
+    }
+  }
