@@ -245,10 +245,25 @@ header > nav > ul {
 .footer__github-link {
     margin: 0 auto;
     font-weight: 700;
+ 
+}
+
+.footer__github-link > a {
+    color: var(--smoky_white);
+}
+
+.footer__github-link > a:hover,
+.footer__github-link > a:focus {
+    color: var(--dark-blue);
+}
+
+.footer__github-link > a:active {
+    color: var(--smoky_white);
 }
 
 .footer__bottom {
     text-align: center;
+    color: var(--smoky_white);
 }
 
 
