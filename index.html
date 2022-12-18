@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <header class="header flex">
+            <a href="https://rs.school/" class="header__logo-link flex">
+                <img src="rs_school_js.svg" alt="logo">
+            </a>
+            <nav class="header__nav flex">
+                <ul class="navigation-items flex">
+                    <li class="item-block">
+                        <a href="#contacts" class="item-link"> contacts</a>
+                    </li>
+                    <li class="item-block">
+                        <a href="#skills" class="item-link"> skills</a>
+                    </li>
+                    <li class="item-block">
+                        <a href="#edication_and_courses" class="item-link"> edication and courses</a>
+                    </li>
+                    <li class="item-block">
+                        <a href="#about_me" class="item-link"> about me</a>
+                    </li>
+                    <li class="item-block">
+                        <a href="#languges" class="item-link"> languges</a>
+                    </li>
+                    <li class="item-block">
+                        <a href="#code_example" class="item-link"> code example</a>
+                    </li>
+                    <li class="item-block">
+                        <a href="#projects" class="item-link"> projects</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero content">
+                <div class="hero__banner flex">
+                    <div class="hero__banner_descr flex">
+                        <h1 class="hero__banner-caption">Natalia Serebrennikova</h1>
+                        <div class="dividing_line_banner"></div>
+                        <span class="hero__banner-post">JUNIOR FRONT-END DEVELOPER</span>
+                    </div>
+                    <img src="photo_cv.png" class="photo_cv" alt="photo">
+                </div>
+                
+            </section>
+            <section class="all_columns flex">
+                    <div class="column_1 flex">
+                        <div class="dividing_line_first"></div>
+                        <div class="contacts" id="contacts">
+                            <h2 class="caption">Contacts</h2>
+                            <ul>
+                                <li class="contact_link">
+                                    Phone: 
+                                    <a href="tel: +7 9211 837 34 36">+7 9211 837 34 36</a>
+
+                                </li>
+                                <li class="contact_link">
+                                    E-mail:
+                                    <a href="kibelkano@gmail.com"> kibelkano@gmail.com</a>
+                                </li>
+                                <li class="contact_link">
+                                    GitHub:   
+                                    <a href="https://github.com/Neta-Solvmint">github.com/Neta- Solvmint</a>
+                                </li>
+                                <li class="contact_link">
+                                    Telegram: 
+                                    <a href="t.me/Rabbit_red"> t.me/Rabbit_red</a>
+                                </li>
+                                <li class="contact_link">
+                                    Diskord:
+                                    <a href="neta-solvmint#5673">neta-solvmint#5673</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="dividing_line_first"></div>
+                        <div class="skills" id="skills">
+                            <h2 class="caption">Skills</h2>
+                            <ul>
+                                <li class="skill_discription">HTML/CSS</li>
+                                <li class="skill_discription">VS Code</li>
+                                <li class="skill_discription">JavaScript (in process)</li>
+                                <li class="skill_discription">Git/GitHub</li>
+                                <li class="skill_discription">Photoshop</li>
+                                <li class="skill_discription">Figma</li>
+                            </ul>
+                        </div>
+                        <div class="dividing_line_dividing_line_first"></div>
+                        <div class="education_and_courses" id="edication_and_courses">
+                            <h2 class="caption">Education and Courses</h2>
+                            <p class="education">"Academy of Marketing and Social and   Information Technologies-IMSIT" (Krasnodar)
+                                Management</p>
+                            
+                            <h3> Skillbox courses</h3>
+                            <ul>
+                                <li class="course">HTML/CSS</li>
+                                <li class="course"> JavaScript (in process...)</li>
+                                <li class="course"> JavaScript (in process...)</li>
+                            </ul>
+                        </div>
+
+                        <div class="dividing_line_first"></div>
+                        <div class="languges" id="languges">
+                            <h2 class="caption">Languages</h2>
+                            <ul>
+                                <li class="languages_discription">Russian - native speaker</li>
+                                <li class="languages_discription">English - B1</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="dividing_line"></div>
+
+                    <div class="column_2">
+                        <div class="dividing_line_second"></div>
+                        <div class="about_me" id="about_me">
+                            <h2 class="caption">About Me</h2>
+                            <p>Currently I worke as a manager in retail company. I am tired of my job and I always wanted to learn something new for changing my life. That is why I`m here. My goal is to develop new products.</p>
+
+                                <h3>My strengths:</h3>
+                                <ul>
+                                    <li class="about_me_strenght">Quick learner</li>
+                                    <li class="about_me_strenght">Diligence</li>
+                                    <li class="about_me_strenght"> Team player</li>
+                                </ul>
+                        </div>
+
+                        <div class="dividing_line_second"></div>
+                        <div class="code_example" id="code_example">
+                            <h2 class="caption">Code example</h2>
+                            <h3>Which color is the brightest?</h3>
+                            <pre class="example">
+                                <code>
+                                    function brightest(arrColors){
+                                    let Vmax = 0;
+                                    let iRes = null;
+                                    let red, green, blue = null;
+                                    let V = null;
+                                    for (let i = arrColors.length-1; i >= 0; i--) {
+                                        red = parseInt("0x" + arrColors[i].slice(1, 3)),
+                                        green = parseInt("0x" + arrColors[i].slice(3, 5)),
+                                        blue = parseInt("0x" + arrColors[i].slice(5, 7));
+                                        V = Math.max(red,green,blue);
+                                        // console.log(red,green,blue, " ====> V=", V);
+                                        if (V >= Vmax){
+                                        Vmax = V;
+                                        iRes = i;
+                                        // console.log("iRes=", iRes);
+                                        }
+                                        // console.log("Vmax=", Vmax);
+                                    }
+                                    // console.log(arrColors + " -> result ->" + arrColors[iRes]);
+                                    return arrColors[iRes];
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="dividing_line_second"></div>
+                        <div class="projects" id="projects">
+                            <h2 class="caption">Projects</h2>
+                            <a href="#">CCSKCLSDL</a>
+                        </div>
+                    </div>
+
+            </section>
+
+        </main>
+
+        <footer class="footer flex">
+            <a href="https://rs.school/" class="header__logo-link flex">
+                <img src="rs_school_js.svg" alt="logo">
+            </a>
+            <div class="footer_information flex">
+                <a href="https://github.com/Neta-Solvmint">Visit my GitHub</a>
+                <span>2022</span>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
