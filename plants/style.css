@@ -1,0 +1,163 @@
+html {
+    box-sizing: border-box;
+    line-height: 1;
+  }
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+  }
+  
+  /* для flex элементов */
+.flexrow {
+  display: flex; 
+  flex-direction: row;
+}
+
+.flexcol {
+  display: flex; 
+  flex-direction: column;
+}
+
+
+@font-face {
+  font-family: 'Inika';
+  src: local("Inika"),
+       url("fonts/Inika-Regular.woff2") format("woff2"),
+       url("fonts/Inika-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: 'Inter';
+  src: local("Inter"),
+        url("fonts/Inter-Regular.woff2") format("woff2"),
+        url("fonts/Inter-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+} 
+
+:root {
+  --light-green: #EDF2EC;
+  --links-nav: #010201;
+  --green: #499A18;
+  --orange: #E06733;
+  --gray: #717171;
+  --dark-gray: #636060;
+}
+
+body {
+  min-width: 320px; /* минимальная ширина сайта для адаптивной верстки */
+  font-family: Inter; /* шрифт по умолчанию */
+} 
+
+
+img {
+  max-width: 100%; /* все изображения вписываются в свои контейнеры */
+}
+  
+h1, h2 {
+  margin: 0;
+  font-weight: normal; /* убираем автоматическую жирность заголовков */
+}
+
+a {
+  text-decoration: none;
+}
+
+/* убираем лишние свойства у всех списков по умолчанию (вместо .list-reset) */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* отображаем курсор в виде руки при наведении; некоторые
+  считают, что необходимо оставлять стрелочный вид для кнопок */
+  cursor: pointer;
+}
+
+.btn-style1 {
+  outline: 1px solid red;
+}
+
+.btn-style2 {
+  outline: 1px solid blue;
+}
+
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  border: 1px solid green;
+  padding: 0 109px;
+  background-color: var(--light-green);
+}
+
+main > .container:nth-child(even) {
+  background-color: white;
+}
+
+body > .container:last-child {
+  background-color: white;
+}
+
+
+
+/* -------------------- */
+.header {
+  width: 100%;
+  height: 134px;
+
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.header > img {
+  width: 79px;
+  height: 21px;
+}
+
+.header__nav-item:not(:last-child) {
+  margin-right: 46px;
+}
+
+
+
+
+.service__cards {
+  flex-wrap: wrap;
+}
+
+.service__li {
+  width: 330px;
+  height: 450px;
+  outline: 1px solid gray;
+}
+
+
+
+footer {
+  display: flex;
+  justify-items: stretch;
+  justify-content: space-between;
+}
