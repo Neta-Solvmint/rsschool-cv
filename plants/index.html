@@ -14,7 +14,7 @@
 </head>
 <body>
     <div class="container">
-        <header class="header flexrow">
+        <header class="header flexrow" id="anchor_header">
             <svg width="81" height="23" viewBox="0 0 81 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.52667 20.9466L10.9212 3.66409C10.9212 3.66409 3.57596 7.00909 2.00199 10.9116C0.428017 14.8141 0.927102 18.4038 2.00201 20.9466" stroke="#499A18" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M1.99646 20.9925C1.99646 20.9925 27.7102 -8.60087 19.3157 4.2216C10.9212 17.0441 20.1707 6.63145 15.4973 14.0678C10.824 21.5041 1.99646 20.9925 1.99646 20.9925Z" stroke="#499A18" stroke-linejoin="round"/>
@@ -24,19 +24,19 @@
             <nav class="header__nav flexrow">
                 <ul class="flexrow">
                     <li class="header__nav-item">
-                        <a href="#">Home</a>
+                        <a href="#anchor_header">Home</a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#">About us</a>
+                        <a href="#anchor_welcome">About us</a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#"> Service</a>
+                        <a href="#anchor_service">Service</a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#">Price</a>
+                        <a href="#anchor_prices">Price</a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#">Contacts</a>
+                        <a href="#anchor_contacts">Contacts</a>
                     </li>
                 </ul>
             </nav>
@@ -45,7 +45,7 @@
 
     <main>
         <div class="container">
-            <section class="welcome flexrow">
+            <section class="welcome flexrow" id="anchor_welcome">
                 <div class="welcome__img-block">
                 </div>
                 <div class="welcome__block flexcol">
@@ -57,7 +57,7 @@
         </div>
 
         <div class="container">
-            <section class="about flexrow">
+            <section class="about flexrow" id="anchor_about">
                 <div class="about__block flexcol">
                     <h2>We&nbsp;are <span>professional experienced</span> gardeners</h2>
                     <p>Lorem Ipsum is&nbsp;simply dummy text of&nbsp;the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an&nbsp;unknown printer took a&nbsp;galley of&nbsp;type and scrambled it&nbsp;to&nbsp;make a&nbsp;type specimen book. It&nbsp;has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
@@ -68,7 +68,7 @@
         </div>
 
         <div class="container">
-            <section class="service flexcol">
+            <section class="service flexcol" id="anchor_service">
                 <div class="service__menu flexrow">
                     <h2>Service and our projects</h2>
                     <div class="service__buttons flexrow">
@@ -125,15 +125,15 @@
         </div>
 
         <div class="container">
-            <section class="prices flexrow">
+            <section class="prices flexrow" id="anchor_prices">
                 <div class="prices__left-block flexcol">
                     <h2>Prices</h2>
                     <div id="prices__radio-group" class="flexcol">
-                        <input class="invisible" type="radio" name="prices__radio" id="prices__radio1" />
+                        <input class="invisible" type="radio" name="prices__radio" id="prices__radio1">
                         <label for="prices__radio1"><span>Basics</span></label>
-                        <input class="invisible" type="radio" name="prices__radio" id="prices__radio2" />
+                        <input class="invisible" type="radio" name="prices__radio" id="prices__radio2">
                         <label for="prices__radio2"><span>Standard</span></label>
-                        <input class="invisible" type="radio" name="prices__radio" id="prices__radio3" />
+                        <input class="invisible" type="radio" name="prices__radio" id="prices__radio3">
                         <label for="prices__radio3"><span>Pro care</span></label>
                     </div>
                 </div>
@@ -147,13 +147,13 @@
         </div>
 
         <div class="container">
-            <section class="contacts">
+            <section class="contacts" id="anchor_contacts">
                 <h2>Contact us</h2>
                 <div class="contacts__content flexrow">
                     <div class="contacts__img-block">
                     </div>
-                    <input class="invisible" id="contacts__toggle" type="checkbox" />
-                    <label class="contacts__label flexrow" for="menu-toggle"><span>City</span></label>
+                    <input class="invisible" id="contacts__toggle" type="checkbox">
+                    <label class="contacts__label flexrow" for="contacts__toggle"><span>City</span></label>
                 </div>
             </section>
         </div>
@@ -166,12 +166,16 @@
             <div class="footer__left">
                 <span>©</span>
                 <span>2022</span>
-                <span>github</span>
+                <a href="https://github.com/Neta-Solvmint">
+                    <span>github</span>
+                </a>
             </div>
             <div class="footer__center">
-                <span>Rolling Scopes School</span>
+                <a href="https://rs.school/js-stage0/"> 
+                  <span>Rolling Scopes School</span>
+                </a>          
             </div>
-            <div class="footer__right ">
+            <div class="footer__right">
                 <ul class="flexrow">
                     <li>
                         <a href="#">
