@@ -422,7 +422,7 @@ body > .container:last-child {
   align-items: end;
 }
 
-.prices__right-block > h2 {
+.prices__right-block > h3 {
   font-family: 'Inter';
   font-weight: 700;
   font-size: 40px;
@@ -508,6 +508,10 @@ footer {
   margin-left: 17px;
 }
 
-.footer__right > a:not(:last-child) {
+/* .footer__right > a:not(:last-child) {
   margin-right: 15.3px;
+} */
+
+.footer__right > ul > li:not(:last-child) {
+  margin-right: 30px;
 }
