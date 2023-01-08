@@ -1,0 +1,554 @@
+html {
+  box-sizing: border-box;
+  line-height: 1;
+  scroll-behavior: smooth;
+}
+  
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* display */
+.flexrow {
+  display: flex; 
+  flex-direction: row;
+}
+.flexcol {
+  display: flex; 
+  flex-direction: column;
+}
+.invisible {
+  display: none;
+}
+
+@font-face {
+  font-family: 'Inika';
+  src: local("Inika"),
+       url("fonts/Inika.woff2") format("woff2"),
+       url("fonts/Inika.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'Inika';
+  src: local("Inika"),
+       url("fonts/Inika-Bold.woff2") format("woff2"),
+       url("fonts/Inika-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+} 
+
+@font-face {
+  font-family: 'Inter';
+  src: local("Inter"),
+        url("fonts/Inter-Regular.woff2") format("woff2"),
+        url("fonts/Inter-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'Inter';
+  src: local("Inter"),
+        url("fonts/Inter-Bold.woff2") format("woff2"),
+        url("fonts/Inter-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+} 
+
+:root {
+  --light-green: #EDF2EC;
+  --links-nav: #010201;
+  --green: #499A18;
+  --orange: #E06733;
+  --gray: #717171;
+  --dark-gray: #636060;
+}
+
+body {
+  min-width: 320px; /* минимальная ширина сайта для адаптивной верстки */
+  font-family: Inter; /* шрифт по умолчанию */
+} 
+
+img {
+  max-width: 100%; /* все изображения вписываются в свои контейнеры */
+}
+  
+h1, h2, h3 {
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--links-nav);
+}
+
+/* убраны лишние свойства у всех списков и их элементов по умолчанию */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+li {
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  /* отображаем курсор в виде руки при наведении */
+  cursor: pointer;
+}
+
+/* стили кнопок и их поведение */
+.btn-style1 {
+  width: 158px;
+  height: 44px;
+  border-radius: 10px;
+  border: 2px solid var(--orange);
+  padding-top: 1px;
+}
+.btn-style1:hover {
+  background-color: var(--orange);
+  color: white;
+  transition: all 0.2s ease-out;
+}
+
+.btn-style2 {
+  width: 161px;
+  height: 50px;
+  border: 1px solid var(--orange);
+  border-radius: 5px;
+  color: var(--orange);
+}
+.btn-style2:hover {
+  background-color: var(--orange);
+  color: white;
+  transition: all 0.2s ease-out;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 109px;
+  background-color: var(--light-green);
+}
+
+/* изменен цвет для отдельных контейнеров секции */
+main > .container:nth-child(even) {
+  background-color: white;
+}
+/* цвет контейнера футера */
+body > .container:last-child {
+  background-color: white;
+}
+
+
+/* -------------------- */
+.header {
+  width: 100%;
+  height: 134px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > svg {
+  margin-bottom: 9px;
+  margin-left: 1px;
+}
+
+.header__nav {
+  margin-right: 2px;
+  margin-bottom: -1px;
+}
+
+.header__nav-item:not(:last-child) {
+  margin-right: 46.7px;
+}
+
+.header__nav-item > a {
+  font-family: "Inika";
+  font-size: 16px;
+  line-height: 50px;
+}
+.header__nav-item > a:hover {
+  color: var(--orange);
+  transition: all 0.2s ease-out;
+}
+
+/* ------------- */
+.welcome {
+  width: 100%;
+  height: 532px;
+  justify-content: space-between;
+}
+
+.welcome__img-block {
+  width: 449px;
+  height: auto;
+  margin-top: 53px;
+  margin-left: -8px;
+  background-image: url("img/leafs.png");
+  background-repeat: no-repeat;
+}
+
+.welcome__text-block {
+  width: 549px;
+  margin-top: 98px;
+}
+
+.welcome__text-block > h1 {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 50px;
+  color: var(--gray);
+  margin-bottom: 43px;
+}
+
+.welcome__text-block > h1 > span {
+  color: var(--green);
+}
+
+.welcome__text-block > p {
+  width: 525px;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 35px;
+  color: var(--dark-gray);
+  margin-bottom: 48px;
+}
+
+
+/* -------------- */
+.about {
+  width: 100%;
+  height: 666px;
+  justify-content: space-between;
+}
+
+.about__block {
+  width: 605px;
+  padding-top: 161px;
+}
+
+.about__block > h2 {
+  width: 463px;
+  font-family: 'Inika';
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--green);
+  margin-bottom: 38px;
+}
+
+.about__block > h2 > span {
+  color: var(--orange);
+}
+
+.about__block > p {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--dark-gray);
+}
+
+.about__img-block {
+  width: 469px;
+  height: auto;
+  margin-top: 93px;
+  background-image: url("img/houseplant1.png");
+  background-repeat: no-repeat;
+  background-position: 5px 0;
+}
+
+/* -------------- */
+.service__menu {
+  padding-top: 40px;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 79px;
+}
+
+.service__menu > h2 {
+  width: 306px;
+  font-family: 'Inika';
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--green);
+  margin-right: 142px;
+}
+
+.service__buttons {
+  padding-top: 3px;
+}
+
+.service__buttons > .btn-style2 {
+  font-family: "Inika";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+.service__buttons > .btn-style2:not(:last-child) {
+  margin-right: 38px;
+}
+
+.service__cards-ul {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding-bottom: 66px;
+}
+
+.service__li {
+  width: 330px;
+  height: 450px;
+  margin-bottom: 55px;
+}
+
+.service__li > img {
+  width: 329px;
+  height: 350px;
+  border-radius: 20px 20px 0px 0px;
+  margin-bottom: 8px;
+}
+
+.service__li_text {
+  align-items: center;
+  border: 1px solid #E3E1D5;
+  border-top: none;
+  border-radius: 0px 0px 20px 20px;
+  margin-bottom: 36px;
+}
+
+.service__li_text > h3 {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--orange);
+  margin-bottom: 15px;
+}
+
+.service__li_text > span {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--gray);
+  margin-bottom: 36px;
+}
+
+/* ----------- */
+.prices {
+  width: 100%;
+  height: 560px;
+  justify-content: space-between;
+  padding-top: 39.4px;
+}
+
+.prices__left-block > h2 {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: black;
+  margin-bottom: 60px;
+}
+
+#prices__radio-group {
+  width: 332px;
+  height: 282px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 34px 0;
+  border: 1px solid #E3E1D5;
+  border-radius: 20px;
+}
+
+/* labels for burger внешний вид */
+#prices__radio-group > label { 
+  width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: var(--light-green);
+  border-radius: 20px;
+}
+
+#prices__radio-group > label > span {
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  margin-top: 1px;
+}
+
+#prices__radio-group > input[type="radio"]+label::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #D9D9D9; 
+  background-image: url("img/arrow-black.png");
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.prices__right-block {
+  width: 452px;
+  align-items: end;
+  padding-top: 1px;
+}
+
+.prices__right-block > h3 {
+  text-align: right;
+  font-family: 'Inter';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  color: black;
+  margin-bottom: 41px;
+}
+.prices__right-block > h3 > span {
+  color: var(--green);
+}
+
+.prices__right-block > .btn-style2 {
+  font-family: 'Inika';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  margin-right: 1px;
+  padding-right: 3px;
+  margin-bottom: 39px;
+}
+
+.prices__img-block {
+  width: 152px;
+  height: 165px;
+  background-image: url("img/leafs-small.png");
+  background-repeat: no-repeat;
+  background-position: -5px -6px;
+}
+
+/* ------------ */
+.contacts {
+  width: 100%;
+  height: 550px;
+  padding-top: 59px;
+}
+
+.contacts > h2 {
+  font-family: 'Inika';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--green);
+  text-align: center;
+  padding-right: 5px;
+}
+
+.contacts__content {
+  justify-content: space-between;
+}
+
+.contacts__img-block {
+  width: 400px;
+  height: 497px;
+  background-image: url("img/contact_woman1.png");
+  margin-top: -59px;
+}
+
+.contacts__label {
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  height: 50px;
+  background: #D6E7D2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-left: 20px;
+  padding-right: 35px;
+  margin-top: 37px;
+}
+.contacts__label > span {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 40px;
+  color: var(--gray);
+}
+.contacts__label::after {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #AEA1A1;
+  background-image: url("img/arrow-white.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* footer */
+footer {
+  justify-content: space-between;
+  justify-items: stretch;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+}
+
+.footer__left > a:hover {
+  color: var(--orange);
+  transition: all 0.2s ease-out;
+}
+
+.footer__left > span {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+}
+.footer__left > span:not(:last-child) {
+  margin-right: 16px;
+}
+
+.footer__center > a:hover {
+  color: var(--orange);
+  transition: all 0.2s ease-out;
+}
+.footer__center > span {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  margin-left: 17px;
+}
+
+.footer__right > ul > li:not(:last-child) {
+  margin-right: 20px;
+}
+.footer__right > ul > li > a > svg > path:hover {
+  fill: var(--orange);
+  transition: all 0.2s ease-out;
+}
