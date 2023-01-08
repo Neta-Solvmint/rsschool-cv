@@ -128,13 +128,14 @@
             <section class="prices flexrow">
                 <div class="prices__left-block flexcol">
                     <h2>Prices</h2>
-                    <ul>
-                        <li class="prices-item">Basics
-                            <input type="radio">
-                        </li>
-                        <li class="prices-item">Standard</li>
-                        <li class="prices-item">Pro care</li>
-                    </ul>
+                    <div id="prices__radio-group" class="flexcol">
+                        <input class="invisible" type="radio" name="prices__radio" id="prices__radio1">
+                        <label for="prices__radio1"><span>Basics</span></label>
+                        <input class="invisible" type="radio" name="prices__radio" id="prices__radio2">
+                        <label for="prices__radio2"><span>Standard</span></label>
+                        <input class="invisible" type="radio" name="prices__radio" id="prices__radio3">
+                        <label for="prices__radio3"><span>Pro care</span></label>
+                    </div>
                 </div>
                 <div class="prices__right-block flexcol">
                     <h3>Our best <span>gardeners</span> are ready to help you</h3>
